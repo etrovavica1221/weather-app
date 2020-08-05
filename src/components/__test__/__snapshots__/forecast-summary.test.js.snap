@@ -9,7 +9,7 @@ exports[`ForecastSummary renders correctly 1`] = `
       class="date"
       data-testid="date-id"
     >
-      1525305600000
+      Thu 3rd May
     </div>
     <div
       class="temperature"
@@ -27,7 +27,11 @@ exports[`ForecastSummary renders correctly 1`] = `
       class="icon"
       data-testid="icon-id"
     >
-      781
+      <i
+        class="wi wi-tornado wi-flip-horizontal wi-rotate-90"
+        data-testid="testIcon"
+        name="owm"
+      />
     </div>
   </span>
 </DocumentFragment>

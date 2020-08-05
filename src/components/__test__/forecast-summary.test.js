@@ -17,7 +17,7 @@ describe("ForecastSummary", () => {
     });
 
     it("renders the correct props", () => {
-        const { getByText } = render(
+        const { getByText, getByTestId } = render(
             <ForecastSummary
                 date={1525305600000}
                 temperature={20}
@@ -25,9 +25,10 @@ describe("ForecastSummary", () => {
                 icon="781"
              />
         );
-        expect(getByText("1525305600000")).toHaveClass("date");
+
+        expect(getByTestId("date-id")).toHaveClass("date");
         expect(getByText("20")).toHaveClass("temperature");
         expect(getByText("Tornado")).toHaveClass("description");
-        expect(getByText("781")).toHaveClass("icon");
+        expect(getByTestId("icon-id")).toHaveClass("icon");
     });
 });
