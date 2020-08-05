@@ -1,24 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ForecastSummary(props) {
-    let {date, maxTemperature, minTemperature, description, icon} = props;
+const ForecastSummary = props => {
+    let {date, temperature,  description, icon} = props;
     return(
     <span className="forecast-summary">
-        <div className="date">{date}</div>
-        <div className="maxTemperature">{maxTemperature}</div>
-        <div className="minTemperature">{minTemperature}</div>
-        <div className="description">{description}</div>
-        <div className="icon">{icon}</div>
+        <div className="date" data-testid="date-id">
+            {date}
+        </div>
+        <div className="temperature" data-testid="temperature-id">
+            {temperature}
+        </div>
+        <div className="description" data-testid="description-id">
+            {description}
+        </div>
+        <div className="icon" data-testid="icon-id">
+            {icon}
+        </div>
+        {/* <button value={date} onClick={handleForecastSelect}>
+            More Details
+        </button> */}
     </span>
-    )
-}
+    );
+};
 
 ForecastSummary.propTypes = {
-    date: PropTypes.any,
-    maxTemperature: PropTypes.any,
-    minTemperature: PropTypes.any,
-    description: PropTypes.any,
+    date: PropTypes.number,
+    temperature: PropTypes.number,
+    description: PropTypes.string,
     icon: PropTypes.any,
 }
 
