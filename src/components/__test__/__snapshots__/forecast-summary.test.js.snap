@@ -15,7 +15,7 @@ exports[`ForecastSummary renders correctly 1`] = `
       class="temperature"
       data-testid="temperature-id"
     >
-      20
+      20°c°c
     </div>
     <div
       class="description"
@@ -33,6 +33,9 @@ exports[`ForecastSummary renders correctly 1`] = `
         name="owm"
       />
     </div>
+    <button>
+      More Details
+    </button>
   </span>
 </DocumentFragment>
 `;

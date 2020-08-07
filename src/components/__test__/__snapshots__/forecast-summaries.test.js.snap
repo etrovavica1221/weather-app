@@ -18,7 +18,7 @@ exports[`ForecastSummaries renders the correct amount of ForecastSummary compone
         class="temperature"
         data-testid="temperature-id"
       >
-        999
+        999°c
       </div>
       <div
         class="description"
@@ -36,6 +36,9 @@ exports[`ForecastSummaries renders the correct amount of ForecastSummary compone
           name="owm"
         />
       </div>
+      <button>
+        More Details
+      </button>
     </span>
     <span
       class="forecast-summary"
@@ -50,7 +53,7 @@ exports[`ForecastSummaries renders the correct amount of ForecastSummary compone
         class="temperature"
         data-testid="temperature-id"
       >
-        777
+        777°c
       </div>
       <div
         class="description"
@@ -68,6 +71,9 @@ exports[`ForecastSummaries renders the correct amount of ForecastSummary compone
           name="owm"
         />
       </div>
+      <button>
+        More Details
+      </button>
     </span>
   </div>
 </DocumentFragment>

@@ -8,7 +8,7 @@ describe("ForecastSummary", () => {
        const { asFragment } = render(
         <ForecastSummary
             date={1525305600000}
-            temperature={20}
+            temperature="20&deg;c"
             description="Tornado"
             icon="781"
          />
@@ -20,14 +20,14 @@ describe("ForecastSummary", () => {
         const { getByText, getByTestId } = render(
             <ForecastSummary
                 date={1525305600000}
-                temperature={20}
+                temperature="20&deg;c"
                 description="Tornado"
                 icon="781"
              />
         );
 
         expect(getByTestId("date-id")).toHaveClass("date");
-        expect(getByText("20")).toHaveClass("temperature");
+        expect(getByTestId("temperature-id")).toHaveClass("temperature");
         expect(getByText("Tornado")).toHaveClass("description");
         expect(getByTestId("icon-id")).toHaveClass("icon");
     });
