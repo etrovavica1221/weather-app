@@ -39,17 +39,16 @@ const changeLocation = (e) => {
     async function fetchData() {
         await axios
         .get( 
-            "https://mcr-codes-weather.herokuapp.com/forecast"
+            `https://mcr-codes-weather.herokuapp.com/forecast?city=${searchText}`
         )
         .then((res) => {
             setLocation(res.data.location);
-            console.log(res.data.location);
             setForecasts(res.data.forecasts); 
         })
-        .catch((error) => {
-            if (error.res.status === 500) {
+        .catch((err) => {
+            if (err.res.status === 500) {
                 throw new Error('Sorry! The Weather App is down. Please try later.');
-            } else if (error.res.status === 404) {
+            } else if (err.res.status === 404) {
                 throw new Error('The location is not found.');
             } else {
                 throw new Error('Ooops.Something went wrong!')
