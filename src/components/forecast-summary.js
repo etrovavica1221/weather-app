@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WeatherIcon from 'react-icons-weather';
 import Moment from 'moment'; 
-import handleForecastSelect from './app'
 
 const ForecastSummary = props => {
     let {date, temperature,  description, icon} = props;

@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Moment from 'moment';
+import '../styles/app.css';
 
-const ForecastDetails = ({forecasts}) => {
-    let { date, temperature, humidity, wind } = forecasts;
+const ForecastDetails = ({forecast}) => {
+    let { date, temperature, humidity, wind } = forecast;
     return(
-        <span>
+        <span id='forecastDetails'>
             <div>
                 {Moment(date).format('ddd Do MMM')}
             </div>
@@ -16,10 +16,10 @@ const ForecastDetails = ({forecasts}) => {
                 {temperature.min}&deg;c
             </div>
             <div>
-                {humidity}
+                {humidity}%
             </div>
             <div>
-                {wind.speed}
+                {wind.speed}mph
             </div>
             <div>
                 {wind.direction}
@@ -28,12 +28,5 @@ const ForecastDetails = ({forecasts}) => {
     
     ); 
 };
-
-ForecastDetails.propTypes = {
-    date: PropTypes.any,
-    temperature: PropTypes.any,
-    humidity: PropTypes.number,
-    wind: PropTypes.any,
-}
 
 export default ForecastDetails;
