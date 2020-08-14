@@ -5,6 +5,7 @@ import ForecastSummaries from './forecast-summaries';
 import ForecastDetails from './ForecastDetails';
 import SearchForm from './SearchForm';
 import '../styles/app.css';
+import Notification from './Notification'
 
 
 const App = () => {
@@ -12,6 +13,8 @@ const [location, setLocation] = useState({city: "", country: ""});
 const [forecasts, setForecasts] = useState([]);
 const [selectedDate, setSelectedDate] = useState(0);
 const [searchText, setSearchText] = useState("");
+const [showNotification, setShowNotification] = useState(false);
+const [error, setError] = useState({}); 
 
 useEffect(() => {
     async function fetchData() {
@@ -45,15 +48,10 @@ const changeLocation = (e) => {
             setLocation(res.data.location);
             setForecasts(res.data.forecasts); 
         })
-        .catch((err) => {
-            if (err.res.status === 500) {
-                throw new Error('Sorry! The Weather App is down. Please try later.');
-            } else if (err.res.status === 404) {
-                throw new Error('The location is not found.');
-            } else {
-                throw new Error('Ooops.Something went wrong!')
-            }
-        })
+        .catch((error) => {
+            setShowNotification(true);
+            setError(error.response.status ? error.response.status : "none");
+        })      
     }
     fetchData();
     setSearchText('');
@@ -75,6 +73,8 @@ const changeLocation = (e) => {
             handleSearch={handleInputChange}
             changeLocation={changeLocation}
         />
+
+        <Notification isVisible={showNotification} error={error} />
         
         <ForecastSummaries onForecastSelect={handleForecastSelect} forecasts={forecasts} />
 
