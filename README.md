@@ -20,6 +20,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Author
 
-Created by Viktoriia Petrova as part of <a href="https://www.manchestercodes.com" target="_blank">Manchester Codes</a> learning process..
+Created by Viktoriia Petrova as part of <a href="https://www.manchestercodes.com" target="_blank">Manchester Codes</a> learning process.
 
 
