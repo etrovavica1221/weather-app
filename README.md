@@ -8,7 +8,7 @@ This is my first React project under which I worked for two weeks practicing bas
 
 Clone my repo and open index.html. It will open a tab in your browser.
 
-<img src="./weather-app-pic.png"/>
+<img src="./weatherApp-pic.png"/>
 
 ## Description
 
