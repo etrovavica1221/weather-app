@@ -5,7 +5,7 @@ import '../styles/app.css';
 const ForecastDetails = ({forecast}) => {
     let { date, temperature, humidity, wind } = forecast;
     return(
-        <span id='forecastDetails'>
+        <div id='forecastDetails'>
             <div>
                 {Moment(date).format('ddd Do MMM')}
             </div>
@@ -24,8 +24,7 @@ const ForecastDetails = ({forecast}) => {
             <div>
                 {wind.direction}
             </div>
-        </span>
-    
+        </div>    
     ); 
 };
 

@@ -1,0 +1,17 @@
+.forecast-summary {
+    border-style: ridge;
+    margin: auto;
+    height: 180%;
+    width: 100%;
+    padding: 30px;
+    background-color: rgb(255, 235, 235, 0.2);
+   
+}
+
+.forecast-summary:hover {
+    background-color: rgb(250, 247, 206, 0.3);
+}
+
+button:hover {
+    border: rgba(252, 241, 89, 0.226);
+}
