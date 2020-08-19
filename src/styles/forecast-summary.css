@@ -1,11 +1,10 @@
 .forecast-summary {
+    justify-content: center;
+    align-items: center;
     border-style: ridge;
-    margin: auto;
-    height: 180%;
-    width: 100%;
-    padding: 30px;
+    margin: 0;
+    padding: 2em;
     background-color: rgb(255, 235, 235, 0.2);
-   
 }
 
 .forecast-summary:hover {
@@ -14,4 +13,28 @@
 
 button:hover {
     border: rgba(252, 241, 89, 0.226);
+}
+
+@media only screen and (max-width: 1200px) {
+    .forecast-summary  {
+        padding: 1em;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .forecast-summary  {
+        padding: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .forecast-summary  {
+        padding: 0.4em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .forecast-summary  {
+        padding: 0.1em;
+    }
 }

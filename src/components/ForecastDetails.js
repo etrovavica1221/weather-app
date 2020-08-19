@@ -1,6 +1,6 @@
 import React from 'react';
 import Moment from 'moment';
-import '../styles/app.css';
+import '../styles/ForecastDetails.css';
 
 const ForecastDetails = ({forecast}) => {
     let { date, temperature, humidity, wind } = forecast;

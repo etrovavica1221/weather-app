@@ -59,9 +59,7 @@ const changeLocation = (e) => {
 
 
 
-    return(
-
-        
+    return(      
     <span className="forecast">
         <LocationDetails
             city={location.city} 

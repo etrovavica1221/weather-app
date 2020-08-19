@@ -2,41 +2,30 @@ html {
     background: url("./44540296_403.jpg");
     font-family: 'Kanit', sans-serif;;
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     font-size: 18px;
+    min-height: 100%;
   }
 
   body {
     margin: 0;
-    min-height: 100vh;
-
+    min-width: 100%;
   }
 
 .forecast {
-    margin: 0px 20px;
+    margin: 0 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 input {
-    margin: 5px;
+    margin: 10px auto 23px auto;
 }
 
-.forecast-summaries {
-    margin: 20px;
-}
-
-#forecastDetails {
-    border-style: ridge;
-    margin: 0 400px;
-}
-
-#forecastDetails > * {
-    font-size: 35px;
-    background-color: rgba(233, 232, 225, 0.733);
-}
-
-#forecastDetails > :first-child {
-    font-size: 42px;
-}
+@media only screen and (max-width: 1200px) {
+    input {
+        margin: 10px auto 10px auto;
+    }
+  }
 
 
