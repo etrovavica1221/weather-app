@@ -6,7 +6,7 @@ This is my first React project under which I worked for two weeks practicing bas
 
 ## Setup
 
-Clone my repo and open index.html. It will open a tab in your browser.
+Clone my repo and open index.html. It will open a tab in your browser or follow the link https://weather-app-ecru-one.vercel.app/ .
 
 <img src="./Screenshot_2020-08-18_16-15-33.png"/>
 
